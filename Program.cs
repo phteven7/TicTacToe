@@ -21,8 +21,8 @@ namespace TicTacToe
        
 
         public static bool gameIsOver = false;
-
-        //Draws board to the console with values from board array.
+        
+        //Draws board to the console with values from board array.c
         public static void drawBoard()
         {
             Console.Clear();
@@ -57,6 +57,7 @@ namespace TicTacToe
                 else if(result == -1)
                 {
                     Console.WriteLine("Draw");
+                    Console.WriteLine("Next time");
                 }
 
 
