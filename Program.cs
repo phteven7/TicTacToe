@@ -18,9 +18,11 @@ namespace TicTacToe
 
         static int playerIndex;
         static int result;
-        static int winner;
+       
 
         public static bool gameIsOver = false;
+
+        //Draws board to the console with values from board array.
         public static void drawBoard()
         {
             Console.Clear();
@@ -31,6 +33,7 @@ namespace TicTacToe
             Console.WriteLine(" {0}  |  {1}  |  {2} ", board[6], board[7], board[8]);
         }
 
+        //Main game loop
         public static void Main(string[] args)
         {
 
@@ -45,6 +48,7 @@ namespace TicTacToe
                 //Check if someone wins
                 checkWin();
 
+                //Checks win condition and assigns winner then displays result of the game to the console.
                 if (result == 1)
                 {
                     Console.WriteLine($"The winner is {player[1 - playerIndex]}!");
@@ -61,13 +65,17 @@ namespace TicTacToe
 
         }
 
+
+        //Ask for input function
         public static void askForInput()
         {
-
+            //Asks for player input and assigns it to a variable
             Console.WriteLine("{0} enter your choice: ", player[playerIndex]);
             string playerInput = Console.ReadLine();
 
-
+            //Variables for function.
+            //Player choice is the input parsed to an int
+            //isValid is used to check the validity of the input
             int playerChoice;
             bool isValid = false;
 
@@ -99,6 +107,7 @@ namespace TicTacToe
                 isValid = true;
             }
 
+            //In the end if the input is valid then the board array is updated and the new board is drawn to the console
             if (isValid)
             {
                 board[playerChoice] = playerPiece[playerIndex];
