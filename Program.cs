@@ -57,7 +57,8 @@ namespace TicTacToe
                 else if(result == -1)
                 {
                     Console.WriteLine("Draw");
-                    Console.WriteLine("Next time");
+
+                    
                 }
 
 
